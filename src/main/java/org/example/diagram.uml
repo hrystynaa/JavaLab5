@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="102.19521076569208" y="239.63983262387023">org.example.PunctuationMark</node>
+    <node x="307.57336247117564" y="418.35225038298">org.example.Sentence</node>
+    <node x="384.1786106715838" y="187.07322176140855">org.example.Word</node>
+    <node x="318.70624594650985" y="636.9390882369286">org.example.WordSorter</node>
+    <node x="230.80565627881998" y="-13.00779102105092">org.example.Letter</node>
+    <node x="87.12461973727619" y="712.1281241874908">org.example.App</node>
+    <node x="-89.31602880914903" y="463.5021330956795">org.example.Text</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.example.Text" target="org.example.Sentence" relationship="CREATE">
+      <point x="152.0" y="-54.64988271269948" />
+      <point x="-100.5" y="15.0" />
+    </edge>
+    <edge source="org.example.Word" target="org.example.Letter" relationship="TO_MANY">
+      <point x="-88.0" y="0.0" />
+      <point x="315.07336247117564" y="256.07322176140855" />
+      <point x="9.26770619235566" y="69.0" />
+    </edge>
+    <edge source="org.example.WordSorter" target="org.example.Word" relationship="DEPENDENCY">
+      <point x="59.36711652466579" y="-56.0" />
+      <point x="53.89475179959186" y="69.0" />
+    </edge>
+    <edge source="org.example.WordSorter" target="org.example.Text" relationship="DEPENDENCY">
+      <point x="0.0" y="-56.0" />
+      <point x="466.70624594650985" y="548.85225038298" />
+      <point x="152.0" y="4.350117287300463" />
+    </edge>
+    <edge source="org.example.Sentence" target="org.example.PunctuationMark" relationship="CREATE">
+      <point x="-100.5" y="0.0" />
+      <point x="272.6246197372762" y="474.85225038298" />
+      <point x="72.92940897158411" y="44.0" />
+    </edge>
+    <edge source="org.example.App" target="org.example.Text" relationship="CREATE">
+      <point x="0.0" y="-44.0" />
+      <point x="108.44064854642522" y="81.0" />
+    </edge>
+    <edge source="org.example.WordSorter" target="org.example.Sentence" relationship="DEPENDENCY">
+      <point x="15.0" y="-56.0" />
+      <point x="73.63288347533421" y="56.49999999999994" />
+    </edge>
+    <edge source="org.example.Word" target="org.example.Letter" relationship="CREATE">
+      <point x="0.0" y="-69.0" />
+      <point x="472.1786106715838" y="55.99220897894908" />
+      <point x="75.0" y="0.0" />
+    </edge>
+    <edge source="org.example.Text" target="org.example.Sentence" relationship="TO_MANY">
+      <point x="152.0" y="-20.649882712699537" />
+      <point x="-100.5" y="48.99999999999994" />
+    </edge>
+    <edge source="org.example.App" target="org.example.WordSorter" relationship="CREATE">
+      <point x="84.0" y="-14.689035950562243" />
+      <point x="-148.0" y="48.5" />
+    </edge>
+    <edge source="org.example.WordSorter" target="org.example.Letter" relationship="DEPENDENCY">
+      <point x="110.97236472507393" y="-56.0" />
+      <point x="577.6786106715838" y="40.99220897894908" />
+      <point x="75.0" y="-15.0" />
+    </edge>
+    <edge source="org.example.Sentence" target="org.example.Word" relationship="CREATE">
+      <point x="64.10524820040814" y="-56.5" />
+      <point x="0.0" y="69.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.7544910179640718" showDependencies="true" x="272.5" y="403.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

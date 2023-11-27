@@ -3,9 +3,17 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a text consisting of sentences.
+ */
 public class Text {
     private final Sentence[] sentences;
-
+    /**
+     * Constructs a Text object from a StringBuilder.
+     *
+     * @param text The StringBuilder representing the text.
+     * @throws IllegalArgumentException If the text is empty.
+     */
     public Text(StringBuilder text) {
         if (isWhiteSpaceOnly(text)) throw new IllegalArgumentException("Text is empty!");
         StringBuilder curSentence = new StringBuilder();
@@ -32,10 +40,20 @@ public class Text {
             sentences[i++] = s;
         }
     }
-
+    /**
+     * Gets an array of Sentence objects from the text.
+     *
+     * @return An array of Sentence objects.
+     */
     public Sentence[] getSentences() {
         return this.sentences;
     }
+    /**
+     * Checks if a StringBuilder contains only whitespace characters.
+     *
+     * @param text The StringBuilder to check.
+     * @return True if the StringBuilder contains only whitespace, otherwise false.
+     */
     private boolean isWhiteSpaceOnly(StringBuilder text) {
         for (int i = 0; i < text.length(); i++) {
             if (!Character.isWhitespace(text.charAt(i))) {
@@ -44,6 +62,11 @@ public class Text {
         }
         return true;
     }
+    /**
+     * Returns a string representation of the Text.
+     *
+     * @return A string representation of the text.
+     */
     @Override
     public String toString() {
         StringBuilder text = new StringBuilder();
